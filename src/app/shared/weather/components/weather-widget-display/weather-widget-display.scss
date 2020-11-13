@@ -6,13 +6,13 @@ $sectionPadding: 5px;
   background: #39bbd7 url('/assets/weather-widget-bg.png') center center no-repeat;
   background-size: 100%;
   font-size: 1rem;
+  padding-bottom: 15px;
 
   .weather-widget-body {
     background: rgba(255, 255, 255, .2);
     display: flex;
     font-size: 1.3em;
     align-items: center;
-    padding: $sectionPadding*2 0;
     .temperature {
       font-size: 1.5em;
       font-weight: 600;
