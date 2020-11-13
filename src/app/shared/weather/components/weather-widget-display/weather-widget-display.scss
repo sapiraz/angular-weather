@@ -1,0 +1,41 @@
+$sectionPadding: 5px;
+
+:host {
+  width: 100%;
+  display: block;
+  background: #39bbd7 url('/assets/weather-widget-bg.png') center center no-repeat;
+  background-size: 100%;
+  font-size: 1rem;
+
+  .weather-widget-body {
+    background: rgba(255, 255, 255, .2);
+    display: flex;
+    font-size: 1.3em;
+    align-items: center;
+    padding: $sectionPadding*2 0;
+    .temperature {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    .weather-category {
+      font-size: .8em;
+    }
+  }
+
+  .weather-widget-header, .weather-widget-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: $sectionPadding;
+  }
+
+  .weather-widget-header {
+    .city-name {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  }
+
+  .weather-widget-footer {
+    font-size: .8em;
+  }
+}

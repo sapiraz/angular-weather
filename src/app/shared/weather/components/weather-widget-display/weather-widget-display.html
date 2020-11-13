@@ -1,0 +1,29 @@
+<div class="weather-widget-display-wrapper">
+  <div class="weather-widget-header">
+    <div class="city-name">
+      {{weather?.cityName}}
+    </div>
+  </div>
+  <div class="weather-widget-body">
+    <div class="weather-icon">
+      <app-weather-icon [iconCode]="weather?.category?.icon">
+      </app-weather-icon>
+    </div>
+    <div>
+      <div class="temperature">
+        {{weather?.temp}}&deg;
+      </div>
+      <div class="weather-category">
+        {{weather?.category.name}}
+      </div>
+    </div>
+  </div>
+  <div class="weather-widget-footer">
+    <div class="humidity">
+      Humidity: {{weather?.humidity}}
+    </div>
+    <div class="pressure">
+      Air Pressure: {{weather?.pressure}}
+    </div>
+  </div>
+</div>

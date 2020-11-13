@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">
+      Weather
+  </div>
+  <div class="card-body">
+    <form [formGroup]="locationForm" (ngSubmit)="onLocationFormSubmit()">
+      <div class="form-row">
+        <div class="col">
+          <select formControlName="cityControl" class="form-control">
+            <option [value]="null">Select city...</option>
+            <option *ngFor="let city of cities" [value]="city.name + ',' + city.country">
+              {{city.name}}
+            </option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </form>
+    <div class="mt-2">
+      <app-weather-widget-display *ngIf="currentWeatherInfo"
+        [metadata]=displayWidgetMetadata
+        [weather]="currentWeatherInfo"
+      ></app-weather-widget-display>
+    </div>
+  </div>
+</div>
